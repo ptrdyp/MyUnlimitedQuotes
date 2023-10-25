@@ -34,6 +34,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+        freeCompilerArgs += listOf("-Xopt-in=kotlin.RequiresOptIn")
     }
 
     buildFeatures {
@@ -62,4 +63,5 @@ dependencies {
     implementation ("com.squareup.okhttp3:logging-interceptor:4.11.0")
 
     implementation("androidx.paging:paging-runtime-ktx:3.2.1")
+    implementation("androidx.room:room-paging:2.6.0")
 }
